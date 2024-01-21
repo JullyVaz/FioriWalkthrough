@@ -16,7 +16,7 @@ sap.ui.define([
 			});
 			this.getView().setModel(oViewModel, "view");
 		},
-
+		
 		onFilterInvoices(oEvent) {
 			// build filter array
 			const aFilter = [];
@@ -29,6 +29,11 @@ sap.ui.define([
 			const oList = this.byId("invoiceList");
 			const oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+
+			onPress() {
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail");
 		}
 	});
 });
