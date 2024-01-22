@@ -31,7 +31,7 @@ sap.ui.define([
 			oBinding.filter(aFilter);
 		},
 
-			onPress() {
+		onPress() {
 			const oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("detail");
 		}
